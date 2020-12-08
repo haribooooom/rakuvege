@@ -1,0 +1,33 @@
+<svg id="コンポーネント_50_3" data-name="コンポーネント 50 – 3" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #12a249;
+        stroke-width: 4px;
+      }
+
+      .cls-2 {
+        fill: #676458;
+        font-size: 18px;
+        font-family: DIN2014-ExtraBold, 'DIN 2014';
+        font-weight: 800;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+
+      .cls-4 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="グループ_207" data-name="グループ 207">
+    <g id="長方形_317" data-name="長方形 317" class="cls-1">
+      <rect class="cls-3" width="35" height="35" rx="17.5"/>
+      <rect class="cls-4" x="2" y="2" width="31" height="31" rx="15.5"/>
+    </g>
+    <text id="_2" data-name="2" class="cls-2" transform="translate(13 23)"><tspan x="0" y="0">2</tspan></text>
+  </g>
+</svg>
