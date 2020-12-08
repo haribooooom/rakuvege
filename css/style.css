@@ -252,6 +252,11 @@ header .logo {
   transform: translate(0, 0);
   transition: 1s;
 }
+@media screen and (min-width: 768px) {
+  .sp-nav {
+    display: none;
+  }
+}
 .sp-nav .navinner {
   position: relative;
 }
@@ -298,6 +303,18 @@ header .logo {
 }
 .kv .block {
   background-color: #12A249;
+}
+
+.message .block {
+  background-color: #9a7646;
+}
+
+.message .block {
+  background-color: #9a7646;
+}
+
+.message .block {
+  background-color: #9a7646;
 }
 
 .message .block {

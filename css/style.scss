@@ -263,6 +263,9 @@ header {
   transform: translate(0, 0);
 //      transform: translate(-100%, 0);
   transition: 1s;
+    @include mq-tablet {
+      display: none;
+  }
 
   .navinner {
     position: relative;
@@ -316,11 +319,27 @@ header {
     background-color:$main;
   }
 }
+
 .message{
     .block{
     background-color:#9a7646;
   }
+}
 
+.message{
+    .block{
+    background-color:#9a7646;
+  }
+}
+.message{
+    .block{
+    background-color:#9a7646;
+  }
+}
+.message{
+    .block{
+    background-color:#9a7646;
+  }
 }
 
 
