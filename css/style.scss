@@ -135,18 +135,6 @@ p.small {
   }
 
 
-.block{
-  width: 100%;
-  height: 200px;
-  background-color:#aaa;
-    @include mq-tablet {
-  padding: 50px;
-  height: 250px;
-  }
-    .inner{
-  position: relative;
-  }
-}
 
 .nav-app {
   text-align: center;
@@ -171,6 +159,26 @@ justify-content: space-around;
     height: 60px;
   }
 }
+
+.block{
+  width: 100%;
+  height: 200px;
+  background-color:#aaa;
+    @include mq-tablet {
+  padding: 50px;
+  height: 250px;
+  }
+    .inner{
+  position: relative;
+  }
+  .nav-app{
+    padding:0 15px;
+    position: absolute;
+      bottom: calc(-200px + 35px);
+      left: 0;
+  }
+}
+
 
 //header
 
@@ -305,6 +313,8 @@ header {
 
 .footer-upper {
   position: relative;
+
+//  big wire
   .box{
     position: absolute;
     padding: 15px;
@@ -325,7 +335,12 @@ header {
   .flex {
     flex-wrap: wrap;
   }
+  p:nth-of-type(2n){
+    font-weight: 900;
+    font-size: 2.5rem;
+  }
 
+//  back imgs
   .bg-box {
     width: 50%;
     padding-top: 50%;
@@ -346,6 +361,7 @@ header {
   .box4 {
     background-image: url(../img/footer-4.jpg);
   }
+
 }
 
 
@@ -353,9 +369,14 @@ header {
 footer {
   background-color: $bl;
   color: $wh;
-  padding: 20px 15%;
   text-align: center;
-
+  @media screen and (max-width: 360px) {
+    padding: 20px 5px;
+  }
+  padding: 10px;
+  @include mq-tablet {
+  padding: 20px 15%;
+}
   img {
     width: 120px;
   }
