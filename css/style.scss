@@ -134,6 +134,12 @@ p.small {
     background-size: cover;
   }
 
+.section{
+  margin-bottom: 40px;
+    @include mq-tablet {
+      margin-bottom: 70px;
+  }
+}
 
 
 .nav-app {
@@ -306,6 +312,15 @@ header {
     font-size: 1.8rem;
     text-align: right;
   }
+  .block{
+    background-color:$main;
+  }
+}
+.message{
+    .block{
+    background-color:#9a7646;
+  }
+
 }
 
 
