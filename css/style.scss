@@ -21,7 +21,7 @@ $border:1px solid #aaa;
 }
 
 
-@for $btm from 1 through 8 {
+@for $btm from 1 through 10 {
   .mb#{$btm}0 {
     margin-bottom: 10px * $btm;
   }
@@ -29,6 +29,27 @@ $border:1px solid #aaa;
 
 body{
   background-color:$base;
+}
+
+.container{
+    @include mq-tablet {
+  max-width: 980px;
+  margin: 0 auto;
+  }
+}
+.container-inner{
+  padding: 0 38px;
+    @include mq-tablet {
+  max-width: 768px;
+  margin: 0 auto;
+  }
+}
+
+.section{
+  margin-bottom: 40px;
+    @include mq-tablet {
+      margin-bottom: 70px;
+  }
 }
 
 //font
@@ -42,7 +63,7 @@ h3,
 
 h1 {
   font-size: 3.2rem;
-  line-height: 1.6;
+  line-height: 1.2;
 
   @include mq-tablet {
     font-size: 6.2rem;
@@ -98,18 +119,6 @@ p.small {
   padding: 0 15px;
 }
 
-.w80 {
-  width: 80%;
-}
-
-.w100 {
-  width: 100%;
-}
-
-.pd40 {
-  padding: 40px 0;
-}
-
 .center {
   margin: 0 auto;
 }
@@ -134,12 +143,7 @@ p.small {
     background-size: cover;
   }
 
-.section{
-  margin-bottom: 40px;
-    @include mq-tablet {
-      margin-bottom: 70px;
-  }
-}
+
 
 
 .nav-app {
@@ -195,10 +199,50 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: $shadow;
+      @include mq-tablet {
+//        justify-content: flex-start;
+    }
   }
 
   .logo {
     padding-left: 10px;
+  }
+}
+.pc-nav {
+  display: none;
+
+  @include mq-tablet {
+    width: 100%;
+    margin-left: 100px;
+    display: block;
+    background-color: blueviolet;
+  }
+    @include mq-pc {
+    width: 60%;
+  }
+
+
+  .sns {
+    width: 10%;
+    background-color: red;
+    margin-right: 20px;
+  }
+}
+.pc-g-nav{
+    justify-content: space-between;
+  background-color:rgba(173, 255, 255,1);
+  li {
+
+  a{
+    margin-right: 20px;
+    line-height: 60px;
+          display: block;
+      box-sizing: border-box;
+      cursor: pointer;
+  }
+  }
+  .flex {
+  background-color:rgba(173, 255,47,1);
   }
 }
 
@@ -295,7 +339,7 @@ header {
 
 /*g-nav
 -----------------------------------*/
-.g-nav {
+.sp-g-nav {
   background-color: $main;
   flex-direction: column;
 
@@ -312,8 +356,27 @@ header {
 .kv{
   padding-top: 40px;
   p{
-    font-size: 1.8rem;
+    padding-top: 20px;
+    font-size:  1.6rem;
     text-align: right;
+      @include mq-tablet {
+        padding-top: 0;
+    font-size: 2.6rem;
+    }
+  }
+  .inner{
+    position: relative;
+  }
+  .img{
+    justify-content: space-around;
+    position: absolute;
+    bottom: -200px;
+    img{
+    width: 40%;
+        @include mq-tablet {
+          width: 30%;
+      }
+    }
   }
   .block{
     background-color:$main;
@@ -322,23 +385,88 @@ header {
 
 .message{
     .block{
-    background-color:#9a7646;
+    background-color:#DEC090;
   }
 }
 
-.message{
+.future{
+  .box{
+background-color:aqua;
+  }
     .block{
-    background-color:#9a7646;
+    background-color:#88BDF7;
   }
 }
-.message{
+.use{
     .block{
-    background-color:#9a7646;
+    background-color:#EDDE6D;
   }
 }
-.message{
+.search{
+  .inner{
+    position: relative;
+  }
+  .img{
+    position: absolute;
+//      top: 0px;
+      left: 0px;
+      bottom: -100px;
+      margin: 0 auto;
+  }
     .block{
-    background-color:#9a7646;
+    background-color:#A2E379;
+  }
+}
+
+.support{
+  .box{
+    padding: 20px 20px 0;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    background-color:rebeccapurple;
+    justify-content: space-between;
+    flex-wrap: wrap;
+      @include mq-tablet {
+    width: 60%;
+    margin-left: 50%;
+    }
+  }
+  .logo-box {
+    width:calc((100%/4) - 20px);
+    padding-top: calc((100%/4) - 20px);
+    margin-bottom: 20px;
+    border: $border;
+    }
+    .box1 {
+    background-image: url(../img/kasoulogo-1.png);
+  }
+
+  .box2 {
+    background-image: url(../img/kasoulogo-2.png);
+  }
+
+  .box3 {
+    background-image: url(../img/kasoulogo-3.png);
+  }
+    .box4 {
+    background-image: url(../img/kasoulogo-4.png);
+  }
+
+  .box5 {
+    background-image: url(../img/kasoulogo-5.png);
+  }
+
+  .box6 {
+    background-image: url(../img/kasoulogo-6.png);
+  }
+  .box7 {
+    background-image: url(../img/kasoulogo-7.png);
+  }
+  .box8 {
+    background-image: url(../img/kasoulogo-8.png);
+  }
+    .block{
+    background-color:#FFCA74;
   }
 }
 
@@ -347,19 +475,19 @@ header {
 
 .footer-upper {
   position: relative;
-
 //  big wire
   .box{
     position: absolute;
-    padding: 15px;
-      top: 15%;
+    padding: 8% 5%;
+      top: 25%;
       left: 0px;
-      bottom: 15%;
+      bottom: 25%;
       right: 0px;
       margin: 0 auto;
     background-color:rgba(255, 255, 255, 0.7);
       @include mq-tablet {
     padding: 50px;
+        margin:0 10% ;
     }
     .flex{
       flex-direction: row;
@@ -378,14 +506,24 @@ header {
   .bg-box {
     width: 50%;
     padding-top: 50%;
+      @include mq-tablet {
+        width: 20%;
+        padding-top: 20%;
+    }
+    &.none{
+      display: none;
+        @include mq-tablet {
+          display: block;
+      }
+    }
   }
 
   .box1 {
-    background-image: url(../img/footer-2.jpg);
+    background-image: url(../img/footer-1.jpg);
   }
 
   .box2 {
-    background-image: url(../img/footer-1.jpg);
+    background-image: url(../img/footer-2.jpg);
   }
 
   .box3 {
@@ -396,6 +534,29 @@ header {
     background-image: url(../img/footer-4.jpg);
   }
 
+  .box5 {
+    background-image: url(../img/footer-5.jpg);
+  }
+
+  .box6 {
+    background-image: url(../img/footer-6.jpg);
+  }
+
+  .box7 {
+    background-image: url(../img/footer-7.jpg);
+  }
+
+  .box8 {
+    background-image: url(../img/footer-8.jpg);
+  }
+
+  .box9 {
+    background-image: url(../img/footer-9.jpg);
+  }
+
+  .box10 {
+    background-image: url(../img/footer-10.jpg);
+  }
 }
 
 

@@ -30,8 +30,42 @@
   margin-bottom: 80px;
 }
 
+.mb90 {
+  margin-bottom: 90px;
+}
+
+.mb100 {
+  margin-bottom: 100px;
+}
+
 body {
   background-color: #EFEDE4;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+}
+
+.container-inner {
+  padding: 0 38px;
+}
+@media screen and (min-width: 768px) {
+  .container-inner {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+}
+
+.section {
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .section {
+    margin-bottom: 70px;
+  }
 }
 
 h1,
@@ -44,7 +78,7 @@ h3,
 
 h1 {
   font-size: 3.2rem;
-  line-height: 1.6;
+  line-height: 1.2;
 }
 @media screen and (min-width: 768px) {
   h1 {
@@ -105,18 +139,6 @@ p.small {
   padding: 0 15px;
 }
 
-.w80 {
-  width: 80%;
-}
-
-.w100 {
-  width: 100%;
-}
-
-.pd40 {
-  padding: 40px 0;
-}
-
 .center {
   margin: 0 auto;
 }
@@ -138,15 +160,6 @@ p.small {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-
-.section {
-  margin-bottom: 40px;
-}
-@media screen and (min-width: 768px) {
-  .section {
-    margin-bottom: 70px;
-  }
 }
 
 .nav-app {
@@ -199,6 +212,43 @@ header .header.flex {
 }
 header .logo {
   padding-left: 10px;
+}
+
+.pc-nav {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .pc-nav {
+    width: 100%;
+    margin-left: 100px;
+    display: block;
+    background-color: blueviolet;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .pc-nav {
+    width: 60%;
+  }
+}
+.pc-nav .sns {
+  width: 10%;
+  background-color: red;
+  margin-right: 20px;
+}
+
+.pc-g-nav {
+  justify-content: space-between;
+  background-color: #adffff;
+}
+.pc-g-nav li a {
+  margin-right: 20px;
+  line-height: 60px;
+  display: block;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.pc-g-nav .flex {
+  background-color: greenyellow;
 }
 
 .menubox {
@@ -283,11 +333,11 @@ header .logo {
 
 /*g-nav
 -----------------------------------*/
-.g-nav {
+.sp-g-nav {
   background-color: #12A249;
   flex-direction: column;
 }
-.g-nav li a {
+.sp-g-nav li a {
   display: block;
   box-sizing: border-box;
   cursor: pointer;
@@ -298,27 +348,110 @@ header .logo {
   padding-top: 40px;
 }
 .kv p {
-  font-size: 1.8rem;
+  padding-top: 20px;
+  font-size: 1.6rem;
   text-align: right;
+}
+@media screen and (min-width: 768px) {
+  .kv p {
+    padding-top: 0;
+    font-size: 2.6rem;
+  }
+}
+.kv .inner {
+  position: relative;
+}
+.kv .img {
+  justify-content: space-around;
+  position: absolute;
+  bottom: -200px;
+}
+.kv .img img {
+  width: 40%;
+}
+@media screen and (min-width: 768px) {
+  .kv .img img {
+    width: 30%;
+  }
 }
 .kv .block {
   background-color: #12A249;
 }
 
 .message .block {
-  background-color: #9a7646;
+  background-color: #DEC090;
 }
 
-.message .block {
-  background-color: #9a7646;
+.future .box {
+  background-color: aqua;
+}
+.future .block {
+  background-color: #88BDF7;
 }
 
-.message .block {
-  background-color: #9a7646;
+.use .block {
+  background-color: #EDDE6D;
 }
 
-.message .block {
-  background-color: #9a7646;
+.search .inner {
+  position: relative;
+}
+.search .img {
+  position: absolute;
+  left: 0px;
+  bottom: -100px;
+  margin: 0 auto;
+}
+.search .block {
+  background-color: #A2E379;
+}
+
+.support .box {
+  padding: 20px 20px 0;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  background-color: rebeccapurple;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) {
+  .support .box {
+    width: 60%;
+    margin-left: 50%;
+  }
+}
+.support .logo-box {
+  width: calc((100%/4) - 20px);
+  padding-top: calc((100%/4) - 20px);
+  margin-bottom: 20px;
+  border: 1px solid #aaa;
+}
+.support .box1 {
+  background-image: url(../img/kasoulogo-1.png);
+}
+.support .box2 {
+  background-image: url(../img/kasoulogo-2.png);
+}
+.support .box3 {
+  background-image: url(../img/kasoulogo-3.png);
+}
+.support .box4 {
+  background-image: url(../img/kasoulogo-4.png);
+}
+.support .box5 {
+  background-image: url(../img/kasoulogo-5.png);
+}
+.support .box6 {
+  background-image: url(../img/kasoulogo-6.png);
+}
+.support .box7 {
+  background-image: url(../img/kasoulogo-7.png);
+}
+.support .box8 {
+  background-image: url(../img/kasoulogo-8.png);
+}
+.support .block {
+  background-color: #FFCA74;
 }
 
 .footer-upper {
@@ -326,10 +459,10 @@ header .logo {
 }
 .footer-upper .box {
   position: absolute;
-  padding: 15px;
-  top: 15%;
+  padding: 8% 5%;
+  top: 25%;
   left: 0px;
-  bottom: 15%;
+  bottom: 25%;
   right: 0px;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.7);
@@ -337,6 +470,7 @@ header .logo {
 @media screen and (min-width: 768px) {
   .footer-upper .box {
     padding: 50px;
+    margin: 0 10%;
   }
 }
 .footer-upper .box .flex {
@@ -354,17 +488,49 @@ header .logo {
   width: 50%;
   padding-top: 50%;
 }
+@media screen and (min-width: 768px) {
+  .footer-upper .bg-box {
+    width: 20%;
+    padding-top: 20%;
+  }
+}
+.footer-upper .bg-box.none {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .footer-upper .bg-box.none {
+    display: block;
+  }
+}
 .footer-upper .box1 {
-  background-image: url(../img/footer-2.jpg);
+  background-image: url(../img/footer-1.jpg);
 }
 .footer-upper .box2 {
-  background-image: url(../img/footer-1.jpg);
+  background-image: url(../img/footer-2.jpg);
 }
 .footer-upper .box3 {
   background-image: url(../img/footer-3.jpg);
 }
 .footer-upper .box4 {
   background-image: url(../img/footer-4.jpg);
+}
+.footer-upper .box5 {
+  background-image: url(../img/footer-5.jpg);
+}
+.footer-upper .box6 {
+  background-image: url(../img/footer-6.jpg);
+}
+.footer-upper .box7 {
+  background-image: url(../img/footer-7.jpg);
+}
+.footer-upper .box8 {
+  background-image: url(../img/footer-8.jpg);
+}
+.footer-upper .box9 {
+  background-image: url(../img/footer-9.jpg);
+}
+.footer-upper .box10 {
+  background-image: url(../img/footer-10.jpg);
 }
 
 footer {
