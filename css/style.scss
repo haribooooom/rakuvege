@@ -147,26 +147,21 @@ p.small {
 
 
 .nav-app {
-  text-align: center;
+  padding: 0 40px;
   background-color: aqua;
   margin: 0 auto;
 justify-content: space-around;
-//  width: 100%;
+  position: relative;
   @media screen and (min-width: 500px) {
-//  width: 70%;
+  padding: 0 20px ;
   }
-    @include mq-tablet {
-//  width: 50%;
-  }
-  a:nth-of-type(2n) {
+      a:nth-of-type(2n) {
     margin-left: 20px;
-      @include mq-tablet {
-    margin-left: 6%;
-    }
   }
 
   img {
     height: 60px;
+  z-index: 999;
   }
 }
 
@@ -175,17 +170,15 @@ justify-content: space-around;
   height: 200px;
   background-color:#aaa;
     @include mq-tablet {
-  padding: 50px;
   height: 250px;
   }
-    .inner{
-  position: relative;
-  }
   .nav-app{
-    padding:0 15px;
-    position: absolute;
-      bottom: calc(-200px + 35px);
-      left: 0;
+  position: relative;
+  z-index: 99;
+      bottom: calc(-200px + 60px + 30px);
+      @include mq-tablet {
+    width: 40%;
+    }
   }
 }
 
@@ -356,21 +349,18 @@ header {
 .kv{
   padding-top: 40px;
   p{
-    padding-top: 20px;
     font-size:  1.6rem;
     text-align: right;
       @include mq-tablet {
-        padding-top: 0;
     font-size: 2.6rem;
     }
   }
-  .inner{
-    position: relative;
-  }
   .img{
     justify-content: space-around;
-    position: absolute;
-    bottom: -200px;
+    margin-bottom:  -200px;
+      @include mq-tablet {
+    margin-bottom:  -250px;
+    }
     img{
     width: 40%;
         @include mq-tablet {
@@ -389,12 +379,75 @@ header {
   }
 }
 
-.future{
-  .box{
-background-color:aqua;
+.future {
+  .contents {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: -60px;
+    background-color: $wh;
+    border-radius: 20px;
+      box-shadow: $shadow;
+      @include mq-tablet {
+        display: flex;
+      padding: 40px 60px;
+
+    }
   }
-    .block{
-    background-color:#88BDF7;
+
+  .content {
+    margin: 0 auto;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+//background-color:rebeccapurple;
+    @include mq-tablet {
+      width:calc((100%/3) - 20px);
+//      padding: 20px;
+      flex-direction: column;
+    }
+  }
+
+  .box {
+    margin-right: 20px;
+    width: 85px;
+    height: 85px;
+    padding: 16px;
+    border-radius: 20px;
+    position: relative;
+    background-color: #EDDE6D;
+      box-shadow: $shadow;
+  @include mq-tablet {
+        width: 180px;
+    height: 180px;
+    padding: 0;
+
+    margin-bottom: 20px;
+
+}
+    img {
+      width: 50px;
+      position: absolute;
+      top: 20%;
+      left: 0px;
+      right: 0px;
+      margin: 0 auto;
+        @include mq-tablet {
+      width: 100px;
+      }
+    }
+  }
+
+  .dot {
+    width: 27px;
+    margin-right: 20px;
+      @include mq-tablet {
+        margin-bottom: 10px
+    }
+  }
+
+  .block {
+    background-color: #88BDF7;
   }
 }
 .use{
@@ -403,32 +456,43 @@ background-color:aqua;
   }
 }
 .search{
-  .inner{
-    position: relative;
+    .img{
+      width: 100%;
+      margin-bottom: -80px;
+      @include mq-tablet {
+        width: 60%;
+    }
   }
-  .img{
-    position: absolute;
-//      top: 0px;
-      left: 0px;
-      bottom: -100px;
-      margin: 0 auto;
+  .img2{
+    display: none;
+      @include mq-tablet {
+    width:25%;
+        margin-right: 20px;
+        display: block;
+    }
+  }
+  .imgflex{
+    width: 100%;
+    justify-content: space-around;
   }
     .block{
     background-color:#A2E379;
   }
 }
 
+
+
 .support{
   .box{
     padding: 20px 20px 0;
     margin: 0 auto;
-    margin-bottom: 50px;
+    margin-bottom: -100px;
     background-color:rebeccapurple;
     justify-content: space-between;
     flex-wrap: wrap;
       @include mq-tablet {
     width: 60%;
-    margin-left: 50%;
+//    margin-left: 40%;
     }
   }
   .logo-box {
@@ -476,32 +540,39 @@ background-color:aqua;
 .footer-upper {
   position: relative;
 //  big wire
-  .box{
+  .box {
+    padding:50px 20px;
     position: absolute;
-    padding: 8% 5%;
-      top: 25%;
-      left: 0px;
-      bottom: 25%;
-      right: 0px;
-      margin: 0 auto;
-    background-color:rgba(255, 255, 255, 0.7);
-      @include mq-tablet {
-    padding: 50px;
-        margin:0 10% ;
-    }
-    .flex{
-      flex-direction: row;
-      flex-wrap: nowrap;
+    top: 25%;
+    left: 0%;
+    bottom: 25%;
+    right: 0%;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.7);
+
+    @include mq-tablet {
+      left: 25%;
+      right: 25%;
+      flex-direction: column;
     }
   }
+
   .flex {
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
   }
-  p:nth-of-type(2n){
+
+  p{
     font-weight: 900;
     font-size: 2.5rem;
   }
-
+  .nav-app{
+    flex-wrap: nowrap;
+      a:nth-of-type(2n) {
+    margin-left: 20px;
+  }
+  }
 //  back imgs
   .bg-box {
     width: 50%;
