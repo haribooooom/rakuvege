@@ -25,13 +25,19 @@
   <!--font-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" type="text/css" media="all" />
+  <link rel="icon" type="image/x-icon" href="img/rac-nomal.svg">
+  <link rel="icon" type="image/x-icon" href="img/vegelogo@2x.png">
+  <link rel="apple-touch-icon-precomposed" href="img/vegelogo@2x.png" />
 
-  <link rel="icon" type="image/x-icon" href="img/vegelogologo.png">
-  <link rel="apple-touch-icon-precomposed" href="img/vegelogo.png" />
-
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/style.css">
-
+  <style>
+    body {
+      overflow-x: hidden;
+    }
+  </style>
 </head>
 
 <body>
@@ -39,7 +45,7 @@
 
     <header>
       <div class="header flex">
-        <div class="logo"><img src="img/ver-logo.png" alt="header-logo"></div>
+        <div class="logo"><img src="img/header-logo.png" alt="header-logo"></div>
         <!--pc-nav-->
         <div class="pc-nav">
           <nav>
@@ -78,10 +84,10 @@
             <div class="nav-app">
               <h3 class="mb20">提供中アプリ</h3>
               <a href="#">
-                <img class="mb10" src="img/icons/app-store-badge.svg" alt="">
+                <img class="mb10" src="img/app-store-badge.svg" alt="">
               </a><br>
               <a href="#">
-                <img class="mb20" src="img/icons/google-play-badge.svg" alt="">
+                <img class="mb20" src="img/google-play-badge.svg" alt="">
               </a>
             </div>
             <div class="g-nav-footer">
@@ -105,23 +111,22 @@
         <div class="container">
 
           <div class="inner">
-            <h1 class="">ベジタリアンへの<br>一歩を歩もう。</h1>
-            <p class="big mb">食材を指定して、気楽に続けられる<br>ベジタリアンサポートアプリ</p>
+            <h1 class="mb20">ベジタリアンへの<br>一歩を歩もう。</h1>
 
+            <h2 class="big mb30">あなたは何のために選ぶ？</h2>
+            <p class="mb10">菜食を通じて、ミライを作る</p>
+            <p class="big mb20">気楽な記録で継続できる<br>ベジタリアンサポートアプリ</p>
+            <img class="sp-img" src="img/sp-slide-top.png" alt="">
           </div>
-        </div>
-        <div class="img flex">
-          <img src="img/top.png" alt="">
-          <img src="img/icons/rac-love.svg" alt="">
         </div>
         <div class="block">
           <div class="inner">
             <div class="nav-app flex">
               <a href="#">
-                <img src="img/icons/app-store-badge.svg" alt=""><br>
+                <img src="img/app-store-badge.svg" alt=""><br>
               </a>
               <a href="#">
-                <img src="img/icons/google-play-badge.svg" alt="">
+                <img src="img/google-play-badge.svg" alt="">
               </a>
             </div>
           </div>
@@ -142,10 +147,10 @@
           <div class="inner">
             <div class="nav-app flex">
               <a href="#">
-                <img src="img/icons/app-store-badge.svg" alt=""><br>
+                <img src="img/app-store-badge.svg" alt=""><br>
               </a>
               <a href="#">
-                <img src="img/icons/google-play-badge.svg" alt="">
+                <img src="img/google-play-badge.svg" alt="">
               </a>
             </div>
           </div>
@@ -159,23 +164,23 @@
             <div class="contents ">
               <div class="content">
                 <div class="box">
-                  <img src="img/icons/fork.svg" alt="">
+                  <img src="img/fork.svg" alt="">
                 </div>
-                <img class="dot" src="img/icons/rac-nomal.svg" alt="">
+                <img class="dot" src="img/rac-nomal.svg" alt="">
                 <h3 class="txt">菜食に特化した食事の記録</h3>
               </div>
               <div class="content">
                 <div class="box">
-                  <img src="img/icons/body.svg" alt="">
+                  <img src="img/body.svg" alt="">
                 </div>
-                <img class="dot" src="img/icons/rac-nomal.svg" alt="">
+                <img class="dot" src="img/rac-nomal.svg" alt="">
                 <h3 class="txt">菜食を通じた体調変化の記録</h3>
               </div>
               <div class="content">
                 <div class="box">
-                  <img src="img/icons/share-love.svg" alt="">
+                  <img src="img/share-love.svg" alt="">
                 </div>
-                <img class="dot" src="img/icons/rac-nomal.svg" alt="">
+                <img class="dot" src="img/rac-nomal.svg" alt="">
                 <h3 class="txt">他のユーザーや生産者とのつながり</h3>
               </div>
             </div>
@@ -185,10 +190,10 @@
           <div class="inner">
             <div class="nav-app flex">
               <a href="#">
-                <img src="img/icons/app-store-badge.svg" alt=""><br>
+                <img src="img/app-store-badge.svg" alt=""><br>
               </a>
               <a href="#">
-                <img src="img/icons/google-play-badge.svg" alt="">
+                <img src="img/google-play-badge.svg" alt="">
               </a>
             </div>
           </div>
@@ -197,14 +202,14 @@
 
 
       <div class="use section">
-        <div class="inner">
-          <h2 class="tcenter mb40">つかいかた</h2>
+        <h2 class="tcenter mb40">つかいかた</h2>
+        <div class="tab-flex">
           <div class="contents">
             <div class="content">
               <div class="title flex">
                 <img class="number" src="img/nm1.svg" alt="">
                 <h3>"目標"を立てる</h3>
-                <img class="icon" src="img/icons/goal.svg" alt="">
+                <img class="icon" src="img/goal.svg" alt="">
               </div>
               <p class="txt">動物、環境、健康、宗教などの理由を設定し、なん
                 のために菜食を目指すのか、週に何日を目標に継続
@@ -214,44 +219,56 @@
               <div class="title flex">
                 <img class="number" src="img/nm2.svg" alt="">
                 <h3>食事を記録する</h3>
-                <img class="icon" src="img/icons/hot-food.svg" alt="">
+                <img class="icon" src="img/hot-food.svg" alt="">
               </div>
               <p class="txt">食べたものを記録し、菜食に当てはまらない項目
-（肉、魚、卵、乳製品、蜂蜜）のチェックを入れま
-す。食材検索で自動記入したり、自分で選んで登録
-することもできます。</p>
+                （肉、魚、卵、乳製品、蜂蜜）のチェックを入れま
+                す。食材検索で自動記入したり、自分で選んで登録
+                することもできます。</p>
             </div>
             <div class="content">
               <div class="title flex">
                 <img class="number" src="img/nm3.svg" alt="">
                 <h3>体調を記録する</h3>
-                <img class="icon" src="img/icons/heart-health.svg" alt="">
+                <img class="icon" src="img/heart-health.svg" alt="">
               </div>
               <p class="txt">菜食主義を取り入れるようになると、体重や睡眠、
-活力等に変化が現れることもあります。自分の体調
-に気遣いながら自分にできる限りのベジタリアン生
-活をしていきましょう。</p>
+                活力等に変化が現れることもあります。自分の体調
+                に気遣いながら自分にできる限りのベジタリアン生
+                活をしていきましょう。</p>
             </div>
             <div class="content">
               <div class="title flex">
                 <img class="number" src="img/nm4.svg" alt="">
                 <h3>記録を観察する</h3>
-                <img class="icon" src="img/icons/calendar.svg" alt="">
+                <img class="icon" src="img/calendar.svg" alt="">
               </div>
               <p class="txt">1週間に一度以上、数日間数週間の食事内容や体調
-の変化を観察しましょう。リマインダー機能でお知
-らせをします。</p>
+                の変化を観察しましょう。リマインダー機能でお知
+                らせをします。</p>
             </div>
           </div>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="img/sp-slide-goal.png" alt=""></div>
+              <div class="swiper-slide"><img src="img/sp-slide-lunch.png" alt=""></div>
+              <div class="swiper-slide"><img src="img/sp-slide-health.png" alt=""></div>
+              <div class="swiper-slide"><img src="img/sp-slide-top.png" alt=""></div>
+            </div>
+            <!--swiper-wrapper-->
+            <div class="swiper-pagination"></div>
+          </div>
+          <!--swiper-container-->
+
         </div>
         <div class="block">
           <div class="inner">
             <div class="nav-app flex">
               <a href="#">
-                <img src="img/icons/app-store-badge.svg" alt=""><br>
+                <img src="img/app-store-badge.svg" alt=""><br>
               </a>
               <a href="#">
-                <img src="img/icons/google-play-badge.svg" alt="">
+                <img src="img/google-play-badge.svg" alt="">
               </a>
             </div>
           </div>
@@ -265,8 +282,8 @@
             <p class="mb80">ランチやディナー、気軽な飲み会…ベジタリアンには制約が多いように感じませんか？<br>
               ユーザータイムラインで他のユーザーのユルベジ生活を参考にしたり、<br>コラムで試してみたくなるようなベジタリアン情報を探してみましょう！</p>
             <div class="imgflex flex">
-              <img class="img" src="img/icons/timeline.svg" alt="">
-              <img class="img2" src="img/icons/rac-nomal.svg" alt="">
+              <img class="img" src="img/timeline.svg" alt="">
+              <img class="img2" src="img/rac-nomal.svg" alt="">
             </div>
 
           </div>
@@ -275,10 +292,10 @@
           <div class="inner">
             <div class="nav-app flex">
               <a href="#">
-                <img src="img/icons/app-store-badge.svg" alt=""><br>
+                <img src="img/app-store-badge.svg" alt=""><br>
               </a>
               <a href="#">
-                <img src="img/icons/google-play-badge.svg" alt="">
+                <img src="img/google-play-badge.svg" alt="">
               </a>
             </div>
           </div>
@@ -307,10 +324,10 @@
           <div class="inner">
             <div class="nav-app flex">
               <a href="#">
-                <img src="img/icons/app-store-badge.svg" alt=""><br>
+                <img src="img/app-store-badge.svg" alt=""><br>
               </a>
               <a href="#">
-                <img src="img/icons/google-play-badge.svg" alt="">
+                <img src="img/google-play-badge.svg" alt="">
               </a>
             </div>
           </div>
@@ -325,10 +342,10 @@
         </div>
         <div class="nav-app flex">
           <a href="#">
-            <img src="img/icons/app-store-badge.svg" alt=""><br>
+            <img src="img/app-store-badge.svg" alt=""><br>
           </a>
           <a href="#">
-            <img src="img/icons/google-play-badge.svg" alt="">
+            <img src="img/google-play-badge.svg" alt="">
           </a>
         </div>
       </div>
@@ -353,7 +370,7 @@
         <li><a href="#use">つかいかた</a></li>
         <li><a href="#support">畜産業サポート</a></li>
       </ul>
-      <img class="mb20" src="img/vegelogo.png" alt="">
+      <img class="mb20" src="img/footer-logo.png" alt="">
       <ul class="flex mb20">
         <li><a href="#">利用規約</a></li>
         <li><a href="#">プライバシーポリシー</a></li>
@@ -361,12 +378,32 @@
       <small style="font-size:1.2rem;"> &copy; 2020 RACVEGE</small>
     </footer>
   </div>
-  <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
     $(function() {
-      $('.menu').on('click', function() {
-        $('nav').toggleClass('click')
+      $('.menubox').on('click', function() {
+        $('.sp-nav').toggleClass('click')
       });
+    });
+    var swiper = new Swiper('.swiper-container', {
+      speed: 1000,
+      autoplay: {
+        delay: 5000,
+      },
+      mode: 'horizontal',
+      loop: true,
+      slidesPerView: 1,
+      calculateHeight: false,
+      centeredSlides: false,
+      shortSwipes: true,
+            effect: 'slide',
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+      },
     });
   </script>
 

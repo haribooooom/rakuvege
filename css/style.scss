@@ -66,18 +66,13 @@ h1 {
   line-height: 1.2;
 
   @include mq-tablet {
-    font-size: 6.2rem;
+    font-size: 4.2rem;
   }
 }
 
 h2 {
   font-size: 3.2rem;
   line-height: 1.6;
-
-  @include mq-tablet {
-    font-size: 4.8rem;
-    line-height: 1.6;
-  }
 }
 
 h3 {
@@ -148,7 +143,7 @@ p.small {
 
 .nav-app {
   padding: 0 40px;
-  background-color: aqua;
+  background-color: rgba(46, 185, 185, 0.42);
   margin: 0 auto;
 justify-content: space-around;
   position: relative;
@@ -175,7 +170,7 @@ justify-content: space-around;
   .nav-app{
   position: relative;
   z-index: 99;
-      bottom: calc(-200px + 60px + 30px);
+      bottom: calc(-200px + 60px + 50px);
       @include mq-tablet {
     width: 40%;
     }
@@ -256,13 +251,8 @@ header {
   &:hover {
     cursor: pointer;
   }
-
-  &.click {
-    transition: 1s;
-    transform: translate(0, 0);
-    z-index: 999;
-  }
 }
+
 
 .bar,
 .bar::before,
@@ -298,10 +288,15 @@ header {
   top: 0;
   right: -70%;
   transform: translate(0, 0);
-//      transform: translate(-100%, 0);
   transition: 1s;
     @include mq-tablet {
       display: none;
+  }
+&.click {
+    transition: 1s;
+      transform: translate(-100%, 0);
+//    transform: translate(0, 0);
+    z-index: 999;
   }
 
   .navinner {
@@ -347,7 +342,7 @@ header {
 }
 
 .kv{
-  padding-top: 40px;
+  padding-top: 30px;
   p{
     font-size:  1.6rem;
     text-align: right;
@@ -355,19 +350,17 @@ header {
     font-size: 2.6rem;
     }
   }
-  .img{
-    justify-content: space-around;
-    margin-bottom:  -200px;
-      @include mq-tablet {
-    margin-bottom:  -250px;
-    }
-    img{
-    width: 40%;
-        @include mq-tablet {
-          width: 30%;
-      }
-    }
+  li{
+    font-size: 2rem;
+    margin-left: 1.6rem;
   }
+  .sp-img{
+    height: 50vh;
+    margin-bottom: -200px;
+      @include mq-tablet {
+    margin-bottom: -250px;
+    }
+}
   .block{
     background-color:$main;
   }
@@ -452,7 +445,14 @@ header {
   }
 }
 .use{
-
+    @include mq-tablet {
+  .tab-flex{
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  }
     .contents {
     width: 100%;
     margin: 0 auto;
@@ -462,11 +462,6 @@ header {
     border-radius: 20px;
       box-shadow: $shadow;
       padding: 40px 30px;
-      @include mq-tablet {
-        width: 45%;
-//        display: flex;
-
-    }
         .content {
           margin-bottom: 30px;
           .title.flex{
@@ -476,6 +471,9 @@ header {
           }
           .txt{
             margin-left: 16px;
+            @include mq-tablet {
+              font-size: 1.4rem;
+          }
           }
         .number{
       width: 40px;
@@ -489,10 +487,26 @@ header {
             margin-bottom: 0;
           }
   }
+        @include mq-tablet {
+          width: 50%;
+      }
   }
-
+//swiper
+  .swiper-container{
+    display: none;
+      @include mq-tablet {
+    display: block;
+    width: 30%;
+    height: 82vh;
+    }
+  }
+  .swiper-slide{
+//    width: 50%;
+  }
     .block{
+        position: relative;
     background-color:#EDDE6D;
+        z-index: -99;
   }
 }
 .search{
@@ -582,7 +596,7 @@ header {
   position: relative;
 //  big wire
   .box {
-    padding:50px 20px;
+    padding:20px;
     position: absolute;
     top: 25%;
     left: 0%;
