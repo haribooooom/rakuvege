@@ -149,7 +149,7 @@ p.small {
 
 .nav-app {
   padding: 0 40px;
-  background-color: rgba(46, 185, 185, 0.42);
+//  background-color: rgba(46, 185, 185, 0.42);
   margin: 0 auto;
 justify-content: space-around;
   position: relative;
@@ -184,6 +184,7 @@ justify-content: space-around;
 }
 
 
+
 //header
 
 header {
@@ -194,7 +195,6 @@ header {
     align-items: center;
     box-shadow: $shadow;
       @include mq-tablet {
-//        justify-content: flex-start;
     }
   }
 
@@ -209,7 +209,6 @@ header {
     width: 100%;
     margin-left: 100px;
     display: block;
-    background-color: blueviolet;
   }
     @include mq-pc {
     width: 60%;
@@ -218,32 +217,36 @@ header {
 
   .sns {
     width: 10%;
-    background-color: red;
+//    background-color: red;
     margin-right: 20px;
   }
 }
 .pc-g-nav{
     justify-content: space-between;
-  background-color:rgba(173, 255, 255,1);
   li {
-
   a{
-    margin-right: 20px;
+    padding-left: 20px;
+    text-align: center;
     line-height: 60px;
           display: block;
       box-sizing: border-box;
       cursor: pointer;
   }
+    img{
+      width: 20px;
+      height: 20px;
+      margin-right: 16px;
+    }
   }
   .flex {
-  background-color:rgba(173, 255,47,1);
+    width: 100%;
   }
 }
 
 
 .menu {
   &box {
-    background-color: #333;
+    background-color: #716c5d;
     display: inline-block;
     width: 70px;
     height: 70px;
@@ -301,7 +304,6 @@ header {
 &.click {
     transition: 1s;
       transform: translate(-100%, 0);
-//    transform: translate(0, 0);
     z-index: 999;
   }
 
@@ -334,7 +336,6 @@ header {
 /*g-nav
 -----------------------------------*/
 .sp-g-nav {
-  background-color: $main;
   flex-direction: column;
 
   li {
@@ -348,12 +349,15 @@ header {
 }
 
 .kv{
-  padding-top: 30px;
+  padding-top: 40px;
+    background: url(../img/kv3.jpg) no-repeat right/cover;
+    text-shadow: $shadow;
   p{
-    font-size:  1.6rem;
+    font-size:  2.2rem;
     text-align: right;
       @include mq-tablet {
     font-size: 2.6rem;
+
     }
   }
   li{
@@ -364,15 +368,33 @@ header {
     height: 50vh;
     margin-bottom: -200px;
       @include mq-tablet {
-    margin-bottom: -250px;
+    margin-bottom: -200px;
     }
 }
   .block{
+        height: 200px;
     background-color:$main;
+      @include mq-tablet {
+        height: 200px;
+    }
   }
 }
 
 .message{
+  .inner{
+    position: relative;
+  }
+  .img{
+    opacity: 0.8;
+    position: absolute;
+    top:0px;
+    right: 0;
+    z-index: -9;
+    transform: rotate(10deg);
+      @include mq-tablet {
+    top:-50px;
+    }
+  }
     .block{
     background-color:#DEC090;
   }
@@ -387,11 +409,13 @@ header {
     background-color: $wh;
     border-radius: 20px;
       box-shadow: $shadow;
+    @media screen and (max-width: 600px) {
+      width: 90%;
+    }
       @include mq-tablet {
         width: 100%;
         display: flex;
       padding: 40px 60px;
-
     }
   }
 
@@ -407,10 +431,10 @@ header {
   }
 
   .box {
-    margin-right: 20px;
-    width: 85px;
-    height: 85px;
-    padding: 16px;
+//    margin-right: 20px;
+//    width: 85px;
+//    height: 85px;
+    padding: 40px;
     border-radius: 20px;
     position: relative;
     background-color: #EDDE6D;
@@ -427,8 +451,8 @@ header {
       width: 50px;
       position: absolute;
       top: 20%;
-      left: 0px;
-      right: 0px;
+      left: 10%;
+      right: 10%;
       margin: 0 auto;
         @include mq-tablet {
       width: 100px;
@@ -438,7 +462,7 @@ header {
 
   .dot {
     width: 27px;
-    margin-right: 20px;
+    margin:0 16px;
       @include mq-tablet {
         margin-bottom: 10px
     }
@@ -454,54 +478,70 @@ header {
     margin: 0 auto;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    background-color:$wh;
+    border-radius: 20px;
+    width: 90%;
+    padding: 30px 0;
+    margin-bottom: 60px;
   }
   }
     .contents {
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
-    margin-bottom: -60px;
-    background-color: $wh;
-    border-radius: 20px;
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+      margin-bottom: -60px;
+      background-color: $wh;
+      border-radius: 20px;
       box-shadow: $shadow;
       padding: 40px 30px;
-        .content {
-          margin-bottom: 30px;
-          .title.flex{
-            width: 100%;
-            margin-bottom: 10px;
-            align-items: center;
+
+      @include mq-tablet {
+        width: 40%;
+        box-shadow: none;
+        background-color:rgba(255, 255, 255, 0);
+      }
+
+      .content {
+        margin-bottom: 30px;
+
+        .title.flex {
+          width: 100%;
+          margin-bottom: 10px;
+          align-items: center;
+        }
+
+        .txt {
+          margin-left: 16px;
+
+          @include mq-tablet {
+            font-size: 1.4rem;
           }
-          .txt{
-            margin-left: 16px;
-            @include mq-tablet {
-              font-size: 1.4rem;
-          }
-          }
-        .number{
-      width: 40px;
+        }
+
+        .number {
+          width: 40px;
           margin-right: 20px;
         }
-        .icon{
-      width: 50px;
+
+        .icon {
+          width: 50px;
           margin-left: 40%;
         }
-          &:last-of-type{
-            margin-bottom: 0;
-          }
-  }
-        @include mq-tablet {
-          width: 50%;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
       }
+
   }
 //swiper
   .swiper-container{
     display: none;
       @include mq-tablet {
     display: block;
-    width: 30%;
-    height: 82vh;
+    width: 33%;
+    height: 85vh;
     }
   }
   .swiper-slide{
@@ -601,6 +641,7 @@ header {
 //footer
 
 .footer-upper {
+  padding: 50px;
   position: relative;
 //  big wire
   .box {
@@ -614,8 +655,8 @@ header {
     background-color: rgba(255, 255, 255, 0.7);
 
     @include mq-tablet {
-      left: 25%;
-      right: 25%;
+      left: 15%;
+      right: 15%;
       flex-direction: column;
     }
   }
@@ -693,13 +734,20 @@ footer {
   background-color: $bl;
   color: $wh;
   text-align: center;
+  padding: 20px;
   @media screen and (max-width: 360px) {
     padding: 20px 5px;
   }
-  padding: 10px;
   @include mq-tablet {
-  padding: 20px 15%;
+  padding: 40px 15%;
 }
+  ul{
+    margin: 0 auto;
+    padding: 0 10%;
+      @include mq-tablet {
+    padding: 0 15%;
+    }
+  }
   img {
     width: 120px;
   }

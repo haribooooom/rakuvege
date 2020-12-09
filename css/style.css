@@ -167,7 +167,6 @@ p.small {
 
 .nav-app {
   padding: 0 40px;
-  background-color: rgba(46, 185, 185, 0.42);
   margin: 0 auto;
   justify-content: space-around;
   position: relative;
@@ -227,7 +226,6 @@ header .logo {
     width: 100%;
     margin-left: 100px;
     display: block;
-    background-color: blueviolet;
   }
 }
 @media screen and (min-width: 1080px) {
@@ -237,27 +235,31 @@ header .logo {
 }
 .pc-nav .sns {
   width: 10%;
-  background-color: red;
   margin-right: 20px;
 }
 
 .pc-g-nav {
   justify-content: space-between;
-  background-color: #adffff;
 }
 .pc-g-nav li a {
-  margin-right: 20px;
+  padding-left: 20px;
+  text-align: center;
   line-height: 60px;
   display: block;
   box-sizing: border-box;
   cursor: pointer;
 }
+.pc-g-nav li img {
+  width: 20px;
+  height: 20px;
+  margin-right: 16px;
+}
 .pc-g-nav .flex {
-  background-color: greenyellow;
+  width: 100%;
 }
 
 .menubox {
-  background-color: #333;
+  background-color: #716c5d;
   display: inline-block;
   width: 70px;
   height: 70px;
@@ -339,7 +341,6 @@ header .logo {
 /*g-nav
 -----------------------------------*/
 .sp-g-nav {
-  background-color: #12A249;
   flex-direction: column;
 }
 .sp-g-nav li a {
@@ -350,10 +351,12 @@ header .logo {
 }
 
 .kv {
-  padding-top: 30px;
+  padding-top: 40px;
+  background: url(../img/kv3.jpg) no-repeat right/cover;
+  text-shadow: 0 0 3px #aaa;
 }
 .kv p {
-  font-size: 1.6rem;
+  font-size: 2.2rem;
   text-align: right;
 }
 @media screen and (min-width: 768px) {
@@ -371,13 +374,35 @@ header .logo {
 }
 @media screen and (min-width: 768px) {
   .kv .sp-img {
-    margin-bottom: -250px;
+    margin-bottom: -200px;
   }
 }
 .kv .block {
+  height: 200px;
   background-color: #12A249;
 }
+@media screen and (min-width: 768px) {
+  .kv .block {
+    height: 200px;
+  }
+}
 
+.message .inner {
+  position: relative;
+}
+.message .img {
+  opacity: 0.8;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  z-index: -9;
+  transform: rotate(10deg);
+}
+@media screen and (min-width: 768px) {
+  .message .img {
+    top: -50px;
+  }
+}
 .message .block {
   background-color: #DEC090;
 }
@@ -390,6 +415,11 @@ header .logo {
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0 0 3px #aaa;
+}
+@media screen and (max-width: 600px) {
+  .future .contents {
+    width: 90%;
+  }
 }
 @media screen and (min-width: 768px) {
   .future .contents {
@@ -411,10 +441,7 @@ header .logo {
   }
 }
 .future .box {
-  margin-right: 20px;
-  width: 85px;
-  height: 85px;
-  padding: 16px;
+  padding: 40px;
   border-radius: 20px;
   position: relative;
   background-color: #EDDE6D;
@@ -432,8 +459,8 @@ header .logo {
   width: 50px;
   position: absolute;
   top: 20%;
-  left: 0px;
-  right: 0px;
+  left: 10%;
+  right: 10%;
   margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
@@ -443,7 +470,7 @@ header .logo {
 }
 .future .dot {
   width: 27px;
-  margin-right: 20px;
+  margin: 0 16px;
 }
 @media screen and (min-width: 768px) {
   .future .dot {
@@ -459,7 +486,12 @@ header .logo {
     margin: 0 auto;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    background-color: #fff;
+    border-radius: 20px;
+    width: 90%;
+    padding: 30px 0;
+    margin-bottom: 60px;
   }
 }
 .use .contents {
@@ -471,6 +503,13 @@ header .logo {
   border-radius: 20px;
   box-shadow: 0 0 3px #aaa;
   padding: 40px 30px;
+}
+@media screen and (min-width: 768px) {
+  .use .contents {
+    width: 40%;
+    box-shadow: none;
+    background-color: rgba(255, 255, 255, 0);
+  }
 }
 .use .contents .content {
   margin-bottom: 30px;
@@ -499,19 +538,14 @@ header .logo {
 .use .contents .content:last-of-type {
   margin-bottom: 0;
 }
-@media screen and (min-width: 768px) {
-  .use .contents {
-    width: 50%;
-  }
-}
 .use .swiper-container {
   display: none;
 }
 @media screen and (min-width: 768px) {
   .use .swiper-container {
     display: block;
-    width: 30%;
-    height: 82vh;
+    width: 33%;
+    height: 85vh;
   }
 }
 .use .block {
@@ -600,6 +634,7 @@ header .logo {
 }
 
 .footer-upper {
+  padding: 50px;
   position: relative;
 }
 .footer-upper .box {
@@ -614,8 +649,8 @@ header .logo {
 }
 @media screen and (min-width: 768px) {
   .footer-upper .box {
-    left: 25%;
-    right: 25%;
+    left: 15%;
+    right: 15%;
     flex-direction: column;
   }
 }
@@ -679,7 +714,7 @@ footer {
   background-color: #333;
   color: #fff;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
 }
 @media screen and (max-width: 360px) {
   footer {
@@ -688,7 +723,16 @@ footer {
 }
 @media screen and (min-width: 768px) {
   footer {
-    padding: 20px 15%;
+    padding: 40px 15%;
+  }
+}
+footer ul {
+  margin: 0 auto;
+  padding: 0 10%;
+}
+@media screen and (min-width: 768px) {
+  footer ul {
+    padding: 0 15%;
   }
 }
 footer img {
