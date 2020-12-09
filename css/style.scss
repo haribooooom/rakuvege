@@ -389,6 +389,7 @@ header {
     border-radius: 20px;
       box-shadow: $shadow;
       @include mq-tablet {
+        width: 100%;
         display: flex;
       padding: 40px 60px;
 
@@ -451,6 +452,45 @@ header {
   }
 }
 .use{
+
+    .contents {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: -60px;
+    background-color: $wh;
+    border-radius: 20px;
+      box-shadow: $shadow;
+      padding: 40px 30px;
+      @include mq-tablet {
+        width: 45%;
+//        display: flex;
+
+    }
+        .content {
+          margin-bottom: 30px;
+          .title.flex{
+            width: 100%;
+            margin-bottom: 10px;
+            align-items: center;
+          }
+          .txt{
+            margin-left: 16px;
+          }
+        .number{
+      width: 40px;
+          margin-right: 20px;
+        }
+        .icon{
+      width: 50px;
+          margin-left: 40%;
+        }
+          &:last-of-type{
+            margin-bottom: 0;
+          }
+  }
+  }
+
     .block{
     background-color:#EDDE6D;
   }
@@ -486,10 +526,11 @@ header {
   .box{
     padding: 20px 20px 0;
     margin: 0 auto;
-    margin-bottom: -100px;
+    margin-bottom: -40px;
     background-color:rebeccapurple;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: relative;
       @include mq-tablet {
     width: 60%;
 //    margin-left: 40%;

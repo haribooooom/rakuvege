@@ -394,6 +394,7 @@ header .logo {
 }
 @media screen and (min-width: 768px) {
   .future .contents {
+    width: 100%;
     display: flex;
     padding: 40px 60px;
   }
@@ -454,6 +455,43 @@ header .logo {
   background-color: #88BDF7;
 }
 
+.use .contents {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: -60px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 3px #aaa;
+  padding: 40px 30px;
+}
+@media screen and (min-width: 768px) {
+  .use .contents {
+    width: 45%;
+  }
+}
+.use .contents .content {
+  margin-bottom: 30px;
+}
+.use .contents .content .title.flex {
+  width: 100%;
+  margin-bottom: 10px;
+  align-items: center;
+}
+.use .contents .content .txt {
+  margin-left: 16px;
+}
+.use .contents .content .number {
+  width: 40px;
+  margin-right: 20px;
+}
+.use .contents .content .icon {
+  width: 50px;
+  margin-left: 40%;
+}
+.use .contents .content:last-of-type {
+  margin-bottom: 0;
+}
 .use .block {
   background-color: #EDDE6D;
 }
@@ -488,10 +526,11 @@ header .logo {
 .support .box {
   padding: 20px 20px 0;
   margin: 0 auto;
-  margin-bottom: -100px;
+  margin-bottom: -40px;
   background-color: rebeccapurple;
   justify-content: space-between;
   flex-wrap: wrap;
+  position: relative;
 }
 @media screen and (min-width: 768px) {
   .support .box {
