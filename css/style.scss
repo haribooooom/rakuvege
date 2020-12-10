@@ -25,39 +25,13 @@ $shadow:0 0 3px #aaa;
   }
 }
 
-body{
-  background-color:$base;
+body {
+  background-color: $base;
 }
 
-.container{
-    @include mq-tablet {
-  max-width: 980px;
-  margin: 0 auto;
-  }
-}
-.container-inner{
-  padding: 0 38px;
-    @include mq-tablet {
-  max-width: 768px;
-  margin: 0 auto;
-  }
-}
 
-.section{
-  margin-bottom: 40px;
-    @include mq-tablet {
-      margin-bottom: 70px;
-  }
-}
 
 //font
-h1,
-h2,
-h3,
-.title,
-.big {
-  font-family: 'Montserrat', sans-serif;
-}
 
 h1 {
   font-size: 3.2rem;
@@ -86,8 +60,7 @@ h3 {
 p,
 li,
 li a,
-a,
-label {
+a {
   font-size: 1.4rem;
   line-height: 1.6;
 
@@ -108,6 +81,22 @@ p.small {
 
 
 //レイアウト
+
+.container {
+  @include mq-tablet {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+}
+
+.section {
+  margin-bottom: 40px;
+
+  @include mq-tablet {
+    margin-bottom: 70px;
+  }
+}
+
 .inner {
   padding: 0 15px;
 }
@@ -130,56 +119,62 @@ p.small {
   }
 }
 
-  .bg {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-
-    .none{
-      display: none;
-        @include mq-tablet {
-          display: block;
-      }
-    }
-
-#topBtn:hover{
-  cursor: pointer;
-  opacity: 0.8;
-  transition:1s;
+.bg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.nav-app {
-  padding: 0 40px;
-  margin: 0 auto;
-justify-content: space-around;
-  position: relative;
-  @media screen and (min-width: 500px) {
-  padding: 0 20px ;
+.none {
+  display: none;
+
+  @include mq-tablet {
+    display: block;
   }
-      a:nth-of-type(2n) {
+}
+
+#topBtn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 1s;
+}
+
+.app-icons {
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  justify-content: space-around;
+
+  @media screen and (min-width: 500px) {
+    padding: 0 20px;
+  }
+
+  a:nth-of-type(2n) {
     margin-left: 20px;
   }
 
   img {
     height: 60px;
-  z-index: 999;
+    z-index: 999;
   }
 }
 
-.block{
+.block {
   width: 100%;
   height: 200px;
-  background-color:#aaa;
-    @include mq-tablet {
-  height: 250px;
+  background-color: #aaa;
+
+  @include mq-tablet {
+    height: 250px;
   }
-  .nav-app{
-  position: relative;
-  z-index: 99;
-      bottom: calc(-200px + 60px + 50px);
-      @include mq-tablet {
-    width: 40%;
+
+  .app-icons {
+    position: relative;
+    z-index: 99;
+    bottom: calc(-200px + 60px + 50px);
+
+    @include mq-tablet {
+      width: 40%;
     }
   }
 }
@@ -189,20 +184,23 @@ justify-content: space-around;
 //header
 
 header {
-  background-color:$wh;
+  background-color: $wh;
+
   .header.flex {
     height: 70px;
     justify-content: space-between;
     align-items: center;
     box-shadow: $shadow;
-      @include mq-tablet {
-    }
+
+    @include mq-tablet {}
   }
 
   .logo {
     padding-left: 10px;
   }
 }
+
+//PCnav
 .pc-nav {
   display: none;
 
@@ -211,7 +209,8 @@ header {
     margin-left: 100px;
     display: block;
   }
-    @include mq-pc {
+
+  @include mq-pc {
     width: 60%;
   }
 
@@ -221,29 +220,36 @@ header {
     margin-right: 20px;
   }
 }
-.pc-g-nav{
-    justify-content: space-between;
+
+
+.pc-g-nav {
+  justify-content: space-between;
+
   li {
-  a{
-    padding-left: 20px;
-    text-align: center;
-    line-height: 60px;
-          display: block;
+    a {
+      padding-left: 20px;
+      line-height: 60px;
+      text-align: center;
+      display: block;
       box-sizing: border-box;
       cursor: pointer;
-    img{
-      width: 20px;
-      height: 20px;
-      margin-right: 16px;
+
+      img {
+        width: 20px;
+        height: 20px;
+        margin-right: 16px;
+      }
     }
   }
-  }
+
   .flex {
     width: 100%;
   }
 }
 
+//SPnav
 
+//menubtn
 .menu {
   &box {
     background-color: #716c5d;
@@ -253,8 +259,6 @@ header {
     margin: 0;
     position: relative;
     z-index: 9999;
-    cursor: pointer;
-
   }
 
   &:hover {
@@ -291,19 +295,21 @@ header {
   }
 }
 
-
+//navmain
 .sp-nav {
   position: absolute;
   top: 0;
   right: -70%;
   transform: translate(0, 0);
   transition: 1s;
-    @include mq-tablet {
-      display: none;
+
+  @include mq-tablet {
+    display: none;
   }
-&.click {
+
+  &.click {
     transition: 1s;
-      transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
     z-index: 999;
   }
 
@@ -325,96 +331,100 @@ header {
   background-color: #716c5d;
   flex-direction: column;
   justify-content: space-between;
-  .nav-app {
+
+  .app-icons {
     text-align: left;
+
     a:nth-of-type(2n) {
       margin-left: 0;
     }
   }
 }
 
-/*g-nav
------------------------------------*/
 .sp-g-nav {
   flex-direction: column;
 
-  li {
-    a {
+  li a {
       display: block;
       box-sizing: border-box;
       cursor: pointer;
       margin-bottom: 20px;
     }
   }
-}
 
-.kv{
+
+
+//main
+
+.kv {
   padding-top: 40px;
-    background: url(../img/kv3.jpg) no-repeat right/cover;
-    text-shadow: $shadow;
-  p{
-    font-size:  2.2rem;
-    text-align: right;
-      @include mq-tablet {
-    font-size: 2.6rem;
+  background: url(../img/kv3.jpg) no-repeat right/cover;
+  text-shadow: $shadow;
 
+  p {
+    font-size: 2.2rem;
+    text-align: right;
+
+    @include mq-tablet {
+      font-size: 2.6rem;
     }
   }
-  li{
+
+  li {
     font-size: 2rem;
     margin-left: 1.6rem;
   }
-  .sp-img{
+
+  .sp-img {
     height: 50vh;
     margin-bottom: -200px;
-      @include mq-tablet {
-    margin-bottom: -200px;
-    }
-}
-  .block{
-        height: 200px;
-    background-color:$main;
-      @include mq-tablet {
-        height: 200px;
-    }
+  }
+
+  .block {
+    height: 200px;
+    background-color: $main;
   }
 }
 
-.message{
-  .inner{
+.message {
+  .inner {
     position: relative;
   }
-  .img{
+
+  .img {
     opacity: 0.8;
     position: absolute;
-    top:0px;
+    top: 0px;
     right: 0;
     z-index: -9;
     transform: rotate(10deg);
-      @include mq-tablet {
-    top:-50px;
+
+    @include mq-tablet {
+      top: -50px;
     }
   }
-    .block{
-    background-color:#DEC090;
+
+  .block {
+    background-color: #DEC090;
   }
 }
 
-.future {
+.point {
   .contents {
     width: 80%;
     margin: 0 auto;
-    position: relative;
     margin-bottom: -40px;
-    background-color: $wh;
+    position: relative;
     border-radius: 20px;
-      box-shadow: $shadow;
+    background-color: $wh;
+    box-shadow: $shadow;
+
     @media screen and (max-width: 600px) {
       width: 90%;
     }
-      @include mq-tablet {
-        width: 100%;
-        display: flex;
+    @include mq-tablet {
+      width: 100%;
+      display: flex;
       padding: 40px 60px;
     }
   }
@@ -424,29 +434,27 @@ header {
     padding: 18px;
     display: flex;
     align-items: center;
+
     @include mq-tablet {
-      width:calc((100%/3) - 20px);
+      width: calc((100%/3) - 20px);
       flex-direction: column;
     }
   }
 
   .box {
-//    margin-right: 20px;
-//    width: 85px;
-//    height: 85px;
     padding: 40px;
     border-radius: 20px;
     position: relative;
     background-color: #EDDE6D;
-      box-shadow: $shadow;
-  @include mq-tablet {
-        width: 180px;
-    height: 180px;
-    padding: 0;
+    box-shadow: $shadow;
 
-    margin-bottom: 20px;
+    @include mq-tablet {
+      width: 180px;
+      height: 180px;
+      margin-bottom: 20px;
+      padding: 0;
+    }
 
-}
     img {
       width: 50px;
       position: absolute;
@@ -454,17 +462,17 @@ header {
       left: 10%;
       right: 10%;
       margin: 0 auto;
-        @include mq-tablet {
-      width: 100px;
+
+      @include mq-tablet {
+        width: 100px;
       }
     }
   }
-
   .dot {
     width: 27px;
-    margin:0 16px;
-      @include mq-tablet {
-        margin-bottom: 10px
+    margin: 0 16px;
+    @include mq-tablet {
+      margin-bottom: 10px
     }
   }
 
@@ -472,139 +480,149 @@ header {
     background-color: #88BDF7;
   }
 }
-.use{
-    @include mq-tablet {
-  .tab-flex{
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    background-color:$wh;
-    border-radius: 20px;
-    width: 90%;
-    padding: 30px 0;
-    margin-bottom: 60px;
-  }
-  }
-    .contents {
-      width: 100%;
+
+.use {
+  @include mq-tablet {
+    .tab-flex {
+      width: 90%;
+      padding: 30px 0;
       margin: 0 auto;
-      position: relative;
-      margin-bottom: -60px;
-      background-color: $wh;
+      margin-bottom: 60px;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-around;
       border-radius: 20px;
-      box-shadow: $shadow;
-      padding: 40px 30px;
-
-      @include mq-tablet {
-        width: 40%;
-        box-shadow: none;
-        background-color:rgba(255, 255, 255, 0);
-      }
-
-      .content {
-        margin-bottom: 30px;
-
-        .title.flex {
-          width: 100%;
-          margin-bottom: 10px;
-          align-items: center;
-        }
-
-        .txt {
-          margin-left: 16px;
-
-          @include mq-tablet {
-            font-size: 1.4rem;
-          }
-        }
-
-        .number {
-          width: 40px;
-          margin-right: 20px;
-        }
-
-        .icon {
-          width: 50px;
-          margin-left: 40%;
-        }
-
-        &:last-of-type {
-          margin-bottom: 0;
-        }
-      }
-
-  }
-//swiper
-  .swiper-container{
-    display: none;
-      @include mq-tablet {
-    display: block;
-    width: 33%;
-    height: 85vh;
+      background-color: $wh;
     }
   }
-  .swiper-slide{
-//    width: 50%;
-  }
-    .block{
-        position: relative;
-    background-color:#EDDE6D;
-        z-index: -99;
-  }
-}
-.search{
-    .img{
-      width: 100%;
-      margin-bottom: -60px;
-      @include mq-tablet {
-        width: 60%;
+
+  .contents {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: -60px;
+    padding: 40px 30px;
+    position: relative;
+    border-radius: 20px;
+    background-color: $wh;
+    box-shadow: $shadow;
+
+    @include mq-tablet {
+      width: 40%;
+      box-shadow: none;
+      background-color: rgba(255, 255, 255, 0);
     }
-  }
-  .tab-flex{
-      @include mq-tablet {
+
+    .content {
+      margin-bottom: 30px;
+
+      .title.flex {
         width: 100%;
-        display: flex;
+        margin-bottom: 10px;
         align-items: center;
-    justify-content: space-around;
-    .txt{
-      margin-top: 150px;
+      }
+
+      .txt {
+        margin-left: 16px;
+
+        @include mq-tablet {
+          font-size: 1.4rem;
+        }
+      }
+
+      .number {
+        width: 40px;
+        margin-right: 20px;
+      }
+
+      .icon {
+        width: 50px;
+        margin-left: 40%;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
+
+  }
+
+  //swiper
+  .swiper-container {
+    display: none;
+
+    @include mq-tablet {
+      display: block;
+      width: 33%;
+      height: 85vh;
     }
   }
-    .block{
-    background-color:#A2E379;
+
+  .block {
+    position: relative;
+    background-color: #EDDE6D;
+    z-index: -99;
+  }
+}
+
+.search {
+  .img {
+    width: 100%;
+    margin-bottom: -60px;
+    @include mq-tablet {
+      width: 60%;
+    }
+  }
+
+  .tab-flex {
+    @include mq-tablet {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      .txt {
+        margin-top: 150px;
+      }
+    }
+  }
+
+  .block {
+    background-color: #A2E379;
   }
 }
 
 
 
-.support{
-  .box{
-    padding: 10px 10px 0;
+.support {
+  .box {
     margin-bottom: -40px;
+    padding: 10px 10px 0;
     justify-content: space-between;
     flex-wrap: wrap;
     position: relative;
-      @include mq-tablet {
-    padding: 20px 20px 0;
-    width: 80%;
-    margin-left: 20%;
+
+    @include mq-tablet {
+      width: 80%;
+      margin-left: 20%;
+      padding: 20px 20px 0;
     }
   }
+
   .logo-box {
-    width:calc((100%/4) - 10px);
-    padding-top: calc((100%/4) - 10px);
+    width: calc((100%/4) - 10px);
     margin-bottom: 10px;
+    padding-top: calc((100%/4) - 10px);
     box-shadow: $shadow;
-      @include mq-tablet {
-    margin-bottom: 20px;
-            width:calc((100%/4) - 20px);
-    padding-top: calc((100%/4) - 20px);
+
+    @include mq-tablet {
+      width: calc((100%/4) - 20px);
+      margin-bottom: 20px;
+      padding-top: calc((100%/4) - 20px);
 
     }
-    }
-    .box1 {
+  }
+
+  .box1 {
     background-image: url(../img/kasoulogo-1.png);
   }
 
@@ -615,7 +633,8 @@ header {
   .box3 {
     background-image: url(../img/kasoulogo-3.png);
   }
-    .box4 {
+
+  .box4 {
     background-image: url(../img/kasoulogo-4.png);
   }
 
@@ -626,14 +645,17 @@ header {
   .box6 {
     background-image: url(../img/kasoulogo-6.png);
   }
+
   .box7 {
     background-image: url(../img/kasoulogo-7.png);
   }
+
   .box8 {
     background-image: url(../img/kasoulogo-8.png);
   }
-    .block{
-    background-color:#FFCA74;
+
+  .block {
+    background-color: #FFCA74;
   }
 }
 
@@ -643,9 +665,10 @@ header {
 .footer-upper {
   padding: 50px;
   position: relative;
-//  big wire
+
+  //  big wire
   .box {
-    padding:20px;
+    padding: 20px;
     position: absolute;
     top: 25%;
     left: 0%;
@@ -667,23 +690,27 @@ header {
     flex-wrap: wrap;
   }
 
-  p{
+  p {
     font-weight: 900;
     font-size: 2.5rem;
   }
-  .nav-app{
+
+  .app-icons {
     flex-wrap: nowrap;
-      a:nth-of-type(2n) {
-    margin-left: 20px;
+
+    a:nth-of-type(2n) {
+      margin-left: 20px;
+    }
   }
-  }
-//  back imgs
+
+  //  back imgs
   .bg-box {
     width: 50%;
     padding-top: 50%;
-      @include mq-tablet {
-        width: 20%;
-        padding-top: 20%;
+
+    @include mq-tablet {
+      width: 20%;
+      padding-top: 20%;
     }
   }
 
@@ -731,23 +758,28 @@ header {
 
 
 footer {
-  background-color: $bl;
-  color: $wh;
-  text-align: center;
   padding: 20px;
+  text-align: center;
+  color: $wh;
+  background-color: $bl;
+
   @media screen and (max-width: 360px) {
     padding: 20px 5px;
   }
+
   @include mq-tablet {
-  padding: 40px 15%;
-}
-  ul{
+    padding: 40px 15%;
+  }
+
+  ul {
     margin: 0 auto;
     padding: 0 10%;
-      @include mq-tablet {
-    padding: 0 15%;
+
+    @include mq-tablet {
+      padding: 0 15%;
     }
   }
+
   img {
     width: 120px;
   }

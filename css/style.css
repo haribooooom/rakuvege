@@ -42,40 +42,6 @@ body {
   background-color: #EFEDE4;
 }
 
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 980px;
-    margin: 0 auto;
-  }
-}
-
-.container-inner {
-  padding: 0 38px;
-}
-@media screen and (min-width: 768px) {
-  .container-inner {
-    max-width: 768px;
-    margin: 0 auto;
-  }
-}
-
-.section {
-  margin-bottom: 40px;
-}
-@media screen and (min-width: 768px) {
-  .section {
-    margin-bottom: 70px;
-  }
-}
-
-h1,
-h2,
-h3,
-.title,
-.big {
-  font-family: 'Montserrat', sans-serif;
-}
-
 h1 {
   font-size: 3.2rem;
   line-height: 1.2;
@@ -105,8 +71,7 @@ h3 {
 p,
 li,
 li a,
-a,
-label {
+a {
   font-size: 1.4rem;
   line-height: 1.6;
 }
@@ -114,8 +79,7 @@ label {
   p,
   li,
   li a,
-  a,
-  label {
+  a {
     font-size: 2rem;
     line-height: 1.4;
   }
@@ -127,6 +91,22 @@ p.small {
 
 .big {
   font-weight: 800;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+}
+
+.section {
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .section {
+    margin-bottom: 70px;
+  }
 }
 
 .inner {
@@ -171,21 +151,21 @@ p.small {
   transition: 1s;
 }
 
-.nav-app {
-  padding: 0 40px;
+.app-icons {
   margin: 0 auto;
-  justify-content: space-around;
+  padding: 0 40px;
   position: relative;
+  justify-content: space-around;
 }
 @media screen and (min-width: 500px) {
-  .nav-app {
+  .app-icons {
     padding: 0 20px;
   }
 }
-.nav-app a:nth-of-type(2n) {
+.app-icons a:nth-of-type(2n) {
   margin-left: 20px;
 }
-.nav-app img {
+.app-icons img {
   height: 60px;
   z-index: 999;
 }
@@ -200,13 +180,13 @@ p.small {
     height: 250px;
   }
 }
-.block .nav-app {
+.block .app-icons {
   position: relative;
   z-index: 99;
   bottom: calc(-200px + 60px + 50px);
 }
 @media screen and (min-width: 768px) {
-  .block .nav-app {
+  .block .app-icons {
     width: 40%;
   }
 }
@@ -249,8 +229,8 @@ header .logo {
 }
 .pc-g-nav li a {
   padding-left: 20px;
-  text-align: center;
   line-height: 60px;
+  text-align: center;
   display: block;
   box-sizing: border-box;
   cursor: pointer;
@@ -272,7 +252,6 @@ header .logo {
   margin: 0;
   position: relative;
   z-index: 9999;
-  cursor: pointer;
 }
 .menu:hover {
   cursor: pointer;
@@ -337,15 +316,13 @@ header .logo {
   flex-direction: column;
   justify-content: space-between;
 }
-.main-navbox .nav-app {
+.main-navbox .app-icons {
   text-align: left;
 }
-.main-navbox .nav-app a:nth-of-type(2n) {
+.main-navbox .app-icons a:nth-of-type(2n) {
   margin-left: 0;
 }
 
-/*g-nav
------------------------------------*/
 .sp-g-nav {
   flex-direction: column;
 }
@@ -378,19 +355,9 @@ header .logo {
   height: 50vh;
   margin-bottom: -200px;
 }
-@media screen and (min-width: 768px) {
-  .kv .sp-img {
-    margin-bottom: -200px;
-  }
-}
 .kv .block {
   height: 200px;
   background-color: #12A249;
-}
-@media screen and (min-width: 768px) {
-  .kv .block {
-    height: 200px;
-  }
 }
 
 .message .inner {
@@ -413,40 +380,40 @@ header .logo {
   background-color: #DEC090;
 }
 
-.future .contents {
+.point .contents {
   width: 80%;
   margin: 0 auto;
-  position: relative;
   margin-bottom: -40px;
-  background-color: #fff;
+  position: relative;
   border-radius: 20px;
+  background-color: #fff;
   box-shadow: 0 0 3px #aaa;
 }
 @media screen and (max-width: 600px) {
-  .future .contents {
+  .point .contents {
     width: 90%;
   }
 }
 @media screen and (min-width: 768px) {
-  .future .contents {
+  .point .contents {
     width: 100%;
     display: flex;
     padding: 40px 60px;
   }
 }
-.future .content {
+.point .content {
   margin: 0 auto;
   padding: 18px;
   display: flex;
   align-items: center;
 }
 @media screen and (min-width: 768px) {
-  .future .content {
+  .point .content {
     width: calc((100%/3) - 20px);
     flex-direction: column;
   }
 }
-.future .box {
+.point .box {
   padding: 40px;
   border-radius: 20px;
   position: relative;
@@ -454,14 +421,14 @@ header .logo {
   box-shadow: 0 0 3px #aaa;
 }
 @media screen and (min-width: 768px) {
-  .future .box {
+  .point .box {
     width: 180px;
     height: 180px;
-    padding: 0;
     margin-bottom: 20px;
+    padding: 0;
   }
 }
-.future .box img {
+.point .box img {
   width: 50px;
   position: absolute;
   top: 20%;
@@ -470,45 +437,45 @@ header .logo {
   margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
-  .future .box img {
+  .point .box img {
     width: 100px;
   }
 }
-.future .dot {
+.point .dot {
   width: 27px;
   margin: 0 16px;
 }
 @media screen and (min-width: 768px) {
-  .future .dot {
+  .point .dot {
     margin-bottom: 10px;
   }
 }
-.future .block {
+.point .block {
   background-color: #88BDF7;
 }
 
 @media screen and (min-width: 768px) {
   .use .tab-flex {
+    width: 90%;
+    padding: 30px 0;
     margin: 0 auto;
+    margin-bottom: 60px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
-    background-color: #fff;
     border-radius: 20px;
-    width: 90%;
-    padding: 30px 0;
-    margin-bottom: 60px;
+    background-color: #fff;
   }
 }
 .use .contents {
   width: 100%;
   margin: 0 auto;
-  position: relative;
   margin-bottom: -60px;
-  background-color: #fff;
-  border-radius: 20px;
-  box-shadow: 0 0 3px #aaa;
   padding: 40px 30px;
+  position: relative;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 3px #aaa;
 }
 @media screen and (min-width: 768px) {
   .use .contents {
@@ -585,29 +552,29 @@ header .logo {
 }
 
 .support .box {
-  padding: 10px 10px 0;
   margin-bottom: -40px;
+  padding: 10px 10px 0;
   justify-content: space-between;
   flex-wrap: wrap;
   position: relative;
 }
 @media screen and (min-width: 768px) {
   .support .box {
-    padding: 20px 20px 0;
     width: 80%;
     margin-left: 20%;
+    padding: 20px 20px 0;
   }
 }
 .support .logo-box {
   width: calc((100%/4) - 10px);
-  padding-top: calc((100%/4) - 10px);
   margin-bottom: 10px;
+  padding-top: calc((100%/4) - 10px);
   box-shadow: 0 0 3px #aaa;
 }
 @media screen and (min-width: 768px) {
   .support .logo-box {
-    margin-bottom: 20px;
     width: calc((100%/4) - 20px);
+    margin-bottom: 20px;
     padding-top: calc((100%/4) - 20px);
   }
 }
@@ -669,10 +636,10 @@ header .logo {
   font-weight: 900;
   font-size: 2.5rem;
 }
-.footer-upper .nav-app {
+.footer-upper .app-icons {
   flex-wrap: nowrap;
 }
-.footer-upper .nav-app a:nth-of-type(2n) {
+.footer-upper .app-icons a:nth-of-type(2n) {
   margin-left: 20px;
 }
 .footer-upper .bg-box {
@@ -717,10 +684,10 @@ header .logo {
 }
 
 footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
   padding: 20px;
+  text-align: center;
+  color: #fff;
+  background-color: #333;
 }
 @media screen and (max-width: 360px) {
   footer {
