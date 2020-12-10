@@ -65,7 +65,7 @@ a {
   line-height: 1.6;
 
   @include mq-tablet {
-    font-size: 2rem;
+//    font-size: 2rem;
     line-height: 1.4;
 
   }
@@ -486,7 +486,7 @@ header {
 }
 
 .use {
-  @include mq-tablet {
+  @include mq-pc {
     .tab-flex {
       width: 90%;
       padding: 30px 0;
@@ -509,8 +509,10 @@ header {
     border-radius: 20px;
     background-color: $wh;
     box-shadow: $shadow;
-
-    @include mq-tablet {
+  @include mq-tablet {
+    width: 70%;
+}
+    @include mq-pc {
       width: 40%;
       box-shadow: none;
       background-color: rgba(255, 255, 255, 0);
@@ -528,7 +530,7 @@ header {
       .txt {
         margin-left: 16px;
 
-        @include mq-tablet {
+        @include mq-pc {
           font-size: 1.4rem;
         }
       }
@@ -541,6 +543,9 @@ header {
       .icon {
         width: 50px;
         margin-left: 40%;
+          @include mq-pc {
+        margin-left: 25%;
+        }
       }
 
       &:last-of-type {
@@ -554,7 +559,7 @@ header {
   .swiper-container {
     display: none;
 
-    @include mq-tablet {
+    @include mq-pc {
       display: block;
       width: 33%;
       height: 85vh;

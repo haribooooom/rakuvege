@@ -80,7 +80,6 @@ a {
   li,
   li a,
   a {
-    font-size: 2rem;
     line-height: 1.4;
   }
 }
@@ -458,7 +457,7 @@ header .logo {
   background-color: #88BDF7;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1080px) {
   .use .tab-flex {
     width: 90%;
     padding: 30px 0;
@@ -483,6 +482,11 @@ header .logo {
 }
 @media screen and (min-width: 768px) {
   .use .contents {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .use .contents {
     width: 40%;
     box-shadow: none;
     background-color: rgba(255, 255, 255, 0);
@@ -499,7 +503,7 @@ header .logo {
 .use .contents .content .txt {
   margin-left: 16px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1080px) {
   .use .contents .content .txt {
     font-size: 1.4rem;
   }
@@ -512,13 +516,18 @@ header .logo {
   width: 50px;
   margin-left: 40%;
 }
+@media screen and (min-width: 1080px) {
+  .use .contents .content .icon {
+    margin-left: 25%;
+  }
+}
 .use .contents .content:last-of-type {
   margin-bottom: 0;
 }
 .use .swiper-container {
   display: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1080px) {
   .use .swiper-container {
     display: block;
     width: 33%;
