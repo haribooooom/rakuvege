@@ -206,7 +206,7 @@
               <div class="content">
                 <div class="title flex">
                   <img class="number" src="img/nm1.svg" alt="">
-                  <h3>"目標"を立てる</h3>
+                  <h3>"目標"を確立</h3>
                   <img class="icon" src="img/goal.svg" alt="">
                 </div>
                 <p class="txt">動物、環境、健康、宗教などの理由を設定し、なん
@@ -216,7 +216,7 @@
               <div class="content">
                 <div class="title flex">
                   <img class="number" src="img/nm2.svg" alt="">
-                  <h3>食事を記録する</h3>
+                  <h3>食事を記録</h3>
                   <img class="icon" src="img/hot-food.svg" alt="">
                 </div>
                 <p class="txt">食べたものを記録し、菜食に当てはまらない項目
@@ -227,7 +227,7 @@
               <div class="content">
                 <div class="title flex">
                   <img class="number" src="img/nm3.svg" alt="">
-                  <h3>体調を記録する</h3>
+                  <h3>体調を記録</h3>
                   <img class="icon" src="img/heart-health.svg" alt="">
                 </div>
                 <p class="txt">菜食主義を取り入れるようになると、体重や睡眠、
@@ -238,7 +238,7 @@
               <div class="content">
                 <div class="title flex">
                   <img class="number" src="img/nm4.svg" alt="">
-                  <h3>記録を観察する</h3>
+                  <h3>記録を観察</h3>
                   <img class="icon" src="img/calendar.svg" alt="">
                 </div>
                 <p class="txt">1週間に一度以上、数日間数週間の食事内容や体調
@@ -367,7 +367,7 @@
         <li><a href="#use">つかいかた</a></li>
         <li><a href="#support">畜産業サポート</a></li>
       </ul>
-      <img class="mb20" src="img/footer-logo.png" alt="">
+      <img id="topBtn" class="mb20" src="img/footer-logo.png" alt="">
       <ul class="flex mb20">
         <li><a href="#">利用規約</a></li>
         <li><a href="#">プライバシーポリシー</a></li>
@@ -402,6 +402,25 @@
         clickable: true,
       },
     });
+      //    top
+      $(function () {
+        $('#topBtn').on('click', function () {
+         $('html,body').animate({
+          scrollTop: 0
+         }, 500);
+          return false;
+        });
+
+        $('#topBtn').hide();
+        $(window).scroll(function () {
+         if ($(this).scrollTop() > 100) {
+          $('#topBtn').fadeIn();
+         } else {
+          $('#topBtn').fadeOut();
+          return false;
+         }
+        });
+      });
   </script>
 
 </body></html>

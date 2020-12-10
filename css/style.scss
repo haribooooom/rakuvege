@@ -3,10 +3,8 @@
 $base:#EFEDE4;
 $main:#12A249;
 $bl:#333;
-$gr:#c7c7c7;
 $wh:#fff;
 $shadow:0 0 3px #aaa;
-$border:1px solid #aaa;
 
 @mixin mq-tablet {
   @media screen and (min-width: 768px) {
@@ -145,11 +143,14 @@ p.small {
       }
     }
 
-
+#topBtn:hover{
+  cursor: pointer;
+  opacity: 0.8;
+  transition:1s;
+}
 
 .nav-app {
   padding: 0 40px;
-//  background-color: rgba(46, 185, 185, 0.42);
   margin: 0 auto;
 justify-content: space-around;
   position: relative;
@@ -217,7 +218,6 @@ header {
 
   .sns {
     width: 10%;
-//    background-color: red;
     margin-right: 20px;
   }
 }
@@ -231,12 +231,12 @@ header {
           display: block;
       box-sizing: border-box;
       cursor: pointer;
-  }
     img{
       width: 20px;
       height: 20px;
       margin-right: 16px;
     }
+  }
   }
   .flex {
     width: 100%;

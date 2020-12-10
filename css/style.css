@@ -165,6 +165,12 @@ p.small {
   }
 }
 
+#topBtn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 1s;
+}
+
 .nav-app {
   padding: 0 40px;
   margin: 0 auto;
@@ -249,7 +255,7 @@ header .logo {
   box-sizing: border-box;
   cursor: pointer;
 }
-.pc-g-nav li img {
+.pc-g-nav li a img {
   width: 20px;
   height: 20px;
   margin-right: 16px;
