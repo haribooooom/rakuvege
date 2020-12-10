@@ -67,20 +67,19 @@
       <!--sp-nav-->
       <div class="sp-nav">
         <div class="navinner">
-
           <div class="menubox">
             <span class="bar"></span>
           </div>
           <div class="main-navbox flex">
-<nav>
-  <ul class="sp-g-nav mb50 flex">
-    <li><a href="#top"> <img src="img/home.svg" alt="">トップ</a></li>
-    <li><a href="#future"><img src="img/point.svg" alt="">特徴</a></li>
-    <li><a href="#use"> <img src="img/smartphone.svg" alt="">つかいかた</a></li>
-    <li><a href="#support"> <img src="img/hand.svg" alt="">畜産業サポート</a></li>
-  </ul>
-</nav>
-            <div class="nav-app">
+            <nav>
+              <ul class="sp-g-nav mb50 flex">
+                <li><a href="#top"> <img src="img/home.svg" alt="">トップ</a></li>
+                <li><a href="#point"><img src="img/point.svg" alt="">特徴</a></li>
+                <li><a href="#use"> <img src="img/smartphone.svg" alt="">つかいかた</a></li>
+                <li><a href="#support"> <img src="img/hand.svg" alt="">畜産業サポート</a></li>
+              </ul>
+            </nav>
+            <div class="app-icons">
               <h3 class="mb20">提供中アプリ</h3>
               <a href="https://xd.adobe.com/view/2ce0c3b7-6365-4572-82c3-8dbe1e8b84f8-79b3/?hints=off">
                 <img class="mb10" src="img/app-store-badge.svg" alt="">
@@ -117,7 +116,7 @@
         </div>
         <div class="block">
           <div class="inner">
-            <div class="nav-app flex">
+            <div class="app-icons flex">
               <a href="https://xd.adobe.com/view/2ce0c3b7-6365-4572-82c3-8dbe1e8b84f8-79b3/?hints=off">
                 <img src="img/app-store-badge.svg" alt=""><br>
               </a>
@@ -142,7 +141,7 @@
         </div>
         <div class="block">
           <div class="inner">
-            <div class="nav-app flex">
+            <div class="app-icons flex">
               <a href="https://xd.adobe.com/view/2ce0c3b7-6365-4572-82c3-8dbe1e8b84f8-79b3/?hints=off">
                 <img src="img/app-store-badge.svg" alt=""><br>
               </a>
@@ -154,7 +153,7 @@
         </div>
       </div>
 
-      <div id="future" class="future section">
+      <div id="point" class="point section">
         <div class="container">
           <div class="inner">
             <h2 class="tcenter mb40">特徴</h2>
@@ -185,7 +184,7 @@
         </div>
         <div class="block">
           <div class="inner">
-            <div class="nav-app flex">
+            <div class="app-icons flex">
               <a href="https://xd.adobe.com/view/2ce0c3b7-6365-4572-82c3-8dbe1e8b84f8-79b3/?hints=off">
                 <img src="img/app-store-badge.svg" alt=""><br>
               </a>
@@ -262,7 +261,7 @@
         </div>
         <div class="block">
           <div class="inner">
-            <div class="nav-app flex">
+            <div class="app-icons flex">
               <a href="https://xd.adobe.com/view/2ce0c3b7-6365-4572-82c3-8dbe1e8b84f8-79b3/?hints=off">
                 <img src="img/app-store-badge.svg" alt=""><br>
               </a>
@@ -287,7 +286,7 @@
         </div>
         <div class="block">
           <div class="inner">
-            <div class="nav-app flex">
+            <div class="app-icons flex">
               <a href="https://xd.adobe.com/view/2ce0c3b7-6365-4572-82c3-8dbe1e8b84f8-79b3/?hints=off">
                 <img src="img/app-store-badge.svg" alt=""><br>
               </a>
@@ -299,7 +298,7 @@
         </div>
       </div>
 
-      <div  id="support" class="support section">
+      <div id="support" class="support section">
         <div class="container">
 
           <div class="inner">
@@ -319,7 +318,7 @@
         </div>
         <div class="block">
           <div class="inner">
-            <div class="nav-app flex">
+            <div class="app-icons flex">
               <a href="https://xd.adobe.com/view/2ce0c3b7-6365-4572-82c3-8dbe1e8b84f8-79b3/?hints=off">
                 <img src="img/app-store-badge.svg" alt=""><br>
               </a>
@@ -337,7 +336,7 @@
         <div class="inner">
           <p class="mb30 big">さぁ、一緒に始めましょう！</p>
         </div>
-        <div class="nav-app flex">
+        <div class="app-icons flex">
           <a href="https://xd.adobe.com/view/2ce0c3b7-6365-4572-82c3-8dbe1e8b84f8-79b3/?hints=off">
             <img src="img/app-store-badge.svg" alt=""><br>
           </a>
@@ -363,7 +362,7 @@
     <footer>
       <ul class="flex mb10">
         <li><a href="#top">トップ</a></li>
-        <li><a href="#future">特徴</a></li>
+        <li><a href="#point">特徴</a></li>
         <li><a href="#use">つかいかた</a></li>
         <li><a href="#support">畜産業サポート</a></li>
       </ul>
@@ -402,25 +401,27 @@
         clickable: true,
       },
     });
-      //    top
-      $(function () {
-        $('#topBtn').on('click', function () {
-         $('html,body').animate({
+    //    top
+    $(function() {
+      $('#topBtn').on('click', function() {
+        $('html,body').animate({
           scrollTop: 0
-         }, 500);
-          return false;
-        });
+        }, 500);
+        return false;
+      });
 
-        $('#topBtn').hide();
-        $(window).scroll(function () {
-         if ($(this).scrollTop() > 100) {
+      $('#topBtn').hide();
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
           $('#topBtn').fadeIn();
-         } else {
+        } else {
           $('#topBtn').fadeOut();
           return false;
-         }
-        });
+        }
       });
+    });
   </script>
 
-</body></html>
+</body>
+
+</html>
