@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .mb10 {
   margin-bottom: 10px;
 }
@@ -40,6 +41,13 @@
 
 body {
   background-color: #EFEDE4;
+  font-family: sans-serif;
+}
+
+h1, h2 {
+  font-family: a-otf-midashi-go-mb31-pr6n, sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
 h1 {
@@ -152,7 +160,6 @@ p.small {
 
 .app-icons {
   margin: 0 auto;
-  padding: 0 40px;
   position: relative;
   justify-content: space-around;
 }
@@ -174,18 +181,24 @@ p.small {
   height: 200px;
   background-color: #aaa;
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 375px) {
   .block {
-    height: 250px;
+    height: 160px;
   }
 }
 .block .app-icons {
   position: relative;
   z-index: 99;
-  bottom: calc(-200px + 60px + 50px);
+  padding-top: 80px;
+}
+@media screen and (max-width: 375œpx) {
+  .block .app-icons {
+    padding-top: 60px;
+  }
 }
 @media screen and (min-width: 768px) {
   .block .app-icons {
+    padding-top: 100px;
     width: 40%;
   }
 }
@@ -227,12 +240,17 @@ header .logo {
   justify-content: space-between;
 }
 .pc-g-nav li a {
-  padding-left: 20px;
+  padding-left: 60px;
   line-height: 60px;
   text-align: center;
   display: block;
   box-sizing: border-box;
   cursor: pointer;
+}
+@media screen and (min-width: 1080px) {
+  .pc-g-nav li a {
+    padding-left: 100px;
+  }
 }
 .pc-g-nav li a img {
   width: 20px;
@@ -340,6 +358,20 @@ header .logo {
   padding-top: 40px;
   background: url(../img/kv3.jpg) no-repeat right/cover;
   text-shadow: 0 0 3px #aaa;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .kv {
+    background: url(../img/kv1.jpg) no-repeat bottom/cover;
+  }
+}
+.kv h1 {
+  margin-left: 10px;
+}
+@media screen and (min-width: 768px) {
+  .kv h1 {
+    margin-left: 40px;
+  }
 }
 .kv p {
   font-size: 2.2rem;
@@ -359,7 +391,6 @@ header .logo {
   margin-bottom: -200px;
 }
 .kv .block {
-  height: 200px;
   background-color: #12A249;
 }
 
@@ -383,7 +414,7 @@ header .logo {
   background-color: #DEC090;
 }
 
-.point .contents {
+.contents, .use .contents {
   width: 80%;
   margin: 0 auto;
   margin-bottom: -40px;
@@ -393,17 +424,18 @@ header .logo {
   box-shadow: 0 0 3px #aaa;
 }
 @media screen and (max-width: 600px) {
-  .point .contents {
+  .contents, .use .contents {
     width: 90%;
   }
 }
 @media screen and (min-width: 768px) {
-  .point .contents {
+  .contents, .use .contents {
     width: 100%;
     display: flex;
     padding: 40px 60px;
   }
 }
+
 .point .content {
   margin: 0 auto;
   padding: 18px;
@@ -460,25 +492,22 @@ header .logo {
 @media screen and (min-width: 1080px) {
   .use .tab-flex {
     width: 90%;
-    padding: 30px 0;
     margin: 0 auto;
-    margin-bottom: 60px;
+    margin-bottom: -40px;
+    padding: 30px 0;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
     border-radius: 20px;
     background-color: #fff;
+    box-shadow: 0 0 3px #aaa;
   }
 }
 .use .contents {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  margin: 0 auto;
-  margin-bottom: -60px;
   padding: 40px 30px;
-  position: relative;
-  border-radius: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 3px #aaa;
 }
 @media screen and (min-width: 768px) {
   .use .contents {
@@ -515,6 +544,11 @@ header .logo {
 .use .contents .content .icon {
   width: 50px;
   margin-left: 40%;
+}
+@media screen and (max-width: 375px) {
+  .use .contents .content .icon {
+    margin-left: 20%;
+  }
 }
 @media screen and (min-width: 1080px) {
   .use .contents .content .icon {
@@ -678,7 +712,7 @@ header .logo {
   background-image: url(../img/footer-4.jpg);
 }
 .footer-upper .box5 {
-  background-image: url(../img/footer-5.jpg);
+  background-image: url(../img/footer-9.jpg);
 }
 .footer-upper .box6 {
   background-image: url(../img/footer-6.jpg);
@@ -690,7 +724,7 @@ header .logo {
   background-image: url(../img/footer-8.jpg);
 }
 .footer-upper .box9 {
-  background-image: url(../img/footer-9.jpg);
+  background-image: url(../img/footer-5.jpg);
 }
 .footer-upper .box10 {
   background-image: url(../img/footer-10.jpg);
@@ -702,7 +736,7 @@ footer {
   color: #fff;
   background-color: #333;
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 375px) {
   footer {
     padding: 20px 5px;
   }
